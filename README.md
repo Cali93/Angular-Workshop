@@ -1,6 +1,6 @@
 # Angular-Workshop
 
-![alt text](https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg "Angular")
+<span style="display:block;text-align:center">![Angular](https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg "Angular")</span>
 
 ### Objectif :
 Dans cet atelier, nous allons découvrir les concepts clés du framework maintenu par Google.
