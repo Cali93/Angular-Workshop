@@ -1,0 +1,17 @@
+.example-card {
+  max-width: 450px;
+  height: auto;
+  margin: 10px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.example-header-image {
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/512px-Angular_full_color_logo.svg.png');
+  background-size: cover;
+}
+
+mat-card-title {
+  font-size: 20px;
+  font-weight: bold;
+}

@@ -1,0 +1,34 @@
+.main-heading {
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+}
+
+mat-input-container {
+  width: 100%;
+}
+
+mat-card {
+  span {
+    float: right;
+
+    i {
+      margin: 0 5px 0 0;
+    }
+  }
+}
+
+mat-spinner {
+  margin: auto;
+}
+
+.error {
+  text-align: center;
+  padding: 20px;
+
+  > span {
+    opacity: 0.4;
+  }
+  .symbol {
+    font-weight: bold;
+  }
+}

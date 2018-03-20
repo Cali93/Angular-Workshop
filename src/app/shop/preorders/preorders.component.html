@@ -1,0 +1,284 @@
+<mat-accordion [ngClass]="animateOnRouteEnter">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Première étape
+      </mat-panel-title>
+      <mat-panel-description>
+        Mettez-vous par équipe de 2 et créez une branche.
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          Créer une branche sur le repo :
+        </mat-card-title>
+        <mat-card-content>
+          <ol type="1">
+            <li>
+              <code>git clone https://github.com/Cali93/Angular-Workshop.git</code>
+            </li>
+            <li>
+              <code>cd Angular-Workshop</code>
+            </li>
+            <li>
+              <code>VOIR ETAPE DE CONFIGURATION CI DESSOUS</code>
+            </li>
+            <li>
+              <code>git branch mybranch</code>
+            </li>
+            <li>
+              <code>git checkout mybranch</code>
+            </li>
+          </ol>
+        </mat-card-content>
+      </mat-card-header>
+    </mat-card>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Deuxième étape
+      </mat-panel-title>
+      <mat-panel-description>
+        Configurez et initialisez l'application.
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          Exécutez les commandes suivantes dans le dossier de ce projet:
+        </mat-card-title>
+        <mat-card-content>
+          <ol type="1">
+            <li>
+              <code> npm install</code>
+            </li>
+            <li>
+              <code> npm start</code>
+            </li>
+            <li> Rendez-vous sur votre
+              <a href="http://localhost:4200">
+                <code>localhost:4200</code>
+              </a>
+            </li>
+          </ol>
+        </mat-card-content>
+      </mat-card-header>
+    </mat-card>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Troisième étape
+        </mat-panel-title>
+        <mat-panel-description>
+          Créez votre premier module et component.
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            Exécutez les commandes suivantes dans le dossier de ce projet:
+          </mat-card-title>
+          <mat-card-content>
+            <ol type="1">
+              <li>Nous allons d'abord générer un module :
+                <code> ng generate module NomDeVotreModule --routing</code>
+              </li>
+              <li>Ensuite nous allons générer un component "parent" qui sera la page qui regroupera tout les compenents du module.
+                <code>ng generate component NomDeVotrePage -m NomDeVotreModule</code>
+              </li>
+              <li>Il est désormais possible de créer d'autres components enfants à la page
+                <code>ng generate component header -m NomDeVotreModule </code>
+              </li>
+              <li>Vous pouvez désormais coder vos différentes fonctionnalités.</li>
+            </ol>
+          </mat-card-content>
+        </mat-card-header>
+      </mat-card>
+    </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Quatrième étape
+      </mat-panel-title>
+      <mat-panel-description>
+        Codez les différentes fonctionnalités.
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          Dans le dossier de votre module :
+        </mat-card-title>
+        <mat-card-content>
+          <ol type="1">
+            <li>Rendez-vous sur le dossier du component enfant (le header par exemple) et cutomisez-le</li>
+            <li>Ce compenent devra contenir:
+              <ol type="a">
+                <li>
+                  <code>SCSS</code>
+                  <p>Au moins une dizaine de lignes</p>
+                </li>
+                <li>
+                  <code>HTML</code>
+                  <p> Avec au moins :</p>
+                  <ul>
+                    <li>Une présentation de votre groupe</li>
+                    <li>Un component material design</li>
+                    <li>Un bouton avec un event lié à une fonction dans le fichier .ts</li>
+                    <li>Un système de templatating
+                      <code>{{ monElement }}</code>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <code>TypeScript</code>
+                  <p> C'est ici que vous écrirez votre business logic</p>
+                  <ol type="1">
+                    <li>Pour votre élément dynamique :
+                      <ol type="I">
+                        <li>Créez d'abord le nom de votre variable et assignez lui un type (dans la classe )
+                          <code>monElement: string;</code>
+                        </li>
+                        <li>Dans le constructeur de votre component, assignez une valeur à la variable comme suit :
+                          <code>{{ fakeConstruct }}</code>
+                        </li>
+                        <li>Dans votre .html interpollez votre variable entre braçelets<code>{{ monElement }}</code></li>
+                      </ol>
+                    </li>
+                    <li>
+                      Pour votre event binding :
+                      <ol type="I">
+                        <li>Créez d'abord le nom de boutton dans votre html
+                          <code>{{monBtn}}</code>
+                        </li>
+                        <li>Vous pouvez désormais créez votre fonction dans votre classe :
+                          <code>{{fakeFunc}}</code>
+                        </li>
+                        <li>Allez plus loin en customisant votre fonction</li>
+                      </ol>
+                    </li>
+                  </ol>
+
+                </li>
+              </ol>
+            </li>
+            <li>Importez le component enfant dans l'html de la page parente grace au selector :
+              <code> {{ baliseCustom }}</code>
+            </li>
+            <li>Vous pouvez désormais coder vos différentes fonctionnalités.</li>
+          </ol>
+        </mat-card-content>
+      </mat-card-header>
+    </mat-card>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Etape Bonus
+      </mat-panel-title>
+      <mat-panel-description>
+        Allez plus loin
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>
+          Ajoutez un service, un pipe ou une directive à votre page
+        </mat-card-title>
+        <mat-card-content>
+          <ol type="1">
+            <li>
+                <code>ng generate service monService</code>
+            </li>
+            <li>
+                <code>ng generate pipe monTuyeau</code>
+            </li>
+            <li>
+              <code>ng generate directive maDirective</code>
+            </li>
+          </ol>
+        </mat-card-content>
+      </mat-card-header>
+    </mat-card>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Dernière étape
+        </mat-panel-title>
+        <mat-panel-description>
+          Ajoutez votre travail sur le repo :
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>
+            Exécutez les commandes suivantes dans le dossier de ce projet:
+          </mat-card-title>
+          <mat-card-content>
+            <ol type="1">
+              <li>
+                <code> git add .</code>
+              </li>
+              <li>
+                <code>git commit -m "comitstrophe"</code>
+              </li>
+              <li>
+                <code>git push -u origin mybranch</code>
+              </li>
+              <li>
+                <code>git pull origin master </code>
+              </li>
+              <li>
+                <code>resolve merging conflicts</code>
+              </li>
+              <li>Faites moi signe quand votre branche est prête à être mergée</li>
+            </ol>
+          </mat-card-content>
+        </mat-card-header>
+      </mat-card>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Déploiement de notre application
+          </mat-panel-title>
+          <mat-panel-description>
+            Déployez votre application sur un server live
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>
+              Compilez le TypeScript en JavaScript dans un seul dossier /dist
+            </mat-card-title>
+            <mat-card-content>
+              <ol type="1">
+                <li>
+                  <code>npm build:prod</code>
+                </li>
+                <li>
+                  Déployez ce dossier sur la plateforme de votre choix
+                </li>
+              </ol>
+            </mat-card-content>
+          </mat-card-header>
+        </mat-card>
+      </mat-expansion-panel>
+</mat-accordion>

@@ -1,0 +1,156 @@
+<mat-accordion [ngClass]="animateOnRouteEnter">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Qu'est-ce qu'Angular ?
+      </mat-panel-title>
+      <mat-panel-description>
+        Un framework front-end JS maintenu par Google
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-card class="example-card">
+      <mat-card-content>
+        <div>
+          Angular est un framework front-end qui va nous aider à modulariser notre application. C’est à dire que nous allons responsabiliser
+          chaque partie de code de notre web app à une fonctionnalité bien précise.
+          <br>
+          <br> La plupart des sites ou des web apps sont découpées comme suit :
+          <ul>
+            <li>Navbar => navigation / routing</li>
+            <li>Partie statique, header/jumbotron</li>
+            <li>Partie dynamique et interactive</li>
+            <li>Un formulaire de login, contact, autre </li>
+            <li>Footer</li>
+          </ul>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>
+          <a href="https://angular.io/docs">Angular docs</a>
+        </button>
+        <button mat-button>
+          <a href="https://material.angular.io/components/categories">Angular Material Components</a>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Démonstrations de projets réalisés avec Angular
+      </mat-panel-title>
+      <mat-panel-description>
+        Liste de quelques projets open-source
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-card class="example-card">
+
+      <mat-card-content>
+        <div>
+          Ce framework est utilisé dans de nombreux contextes, bien que plus souvent adopté par les entreprises à gros effectifs, certaines
+          start-ups se laissent aussi conquérir par la puissance de l'outil. <br>
+          <br> Voici une liste de projets faits avec Angular :
+          <br>
+          <ul>
+            <li>
+              <a href="http://md-angular2.creative-tim.com/dashboard">Un dashboard Admin</a>
+            </li>
+            <li>
+              <a href="https://angularspree.firebaseapp.com/">Une web app e-commerce</a>
+            </li>
+            <li>
+              <a href="http://akveo.com/ngx-admin/#/pages/dashboard">Un autre dashboard Admin</a>
+            </li>
+            <li>
+              <a href="https://www.cyph.com/">Cyph, platforme de chat privé</a>
+            </li>
+          </ul>
+        </div>
+      </mat-card-content>
+      <!-- <mat-card-actions>
+          <button mat-button><a href="https://angular.io/docs">Angular docs</a></button>
+          <button mat-button><a href="https://material.angular.io/components/categories">Angular Material Components</a></button>
+        </mat-card-actions> -->
+    </mat-card>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Architecture de dossier
+      </mat-panel-title>
+      <mat-panel-description>
+        Designed to work with big teams and scale
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-card class="example-card">
+      <mat-card-content>
+        <div>
+          L'architectude de dossier est elle aussi divisée en différentes parties.
+          <br> La plupart des projets Angular sont découpés comme suit :
+          <ul>
+            <li> Chaque page est un module</li>
+            <li> Chaque module peut contenir des components et des services</li>
+            <li> Il y a aussi des components partagés (navbar, boutons souvent réutilisés)</li>
+            <li> Des fichiers de routing</li>
+            <li> Des services qui seront les fonctions accessibles au travers de l'app</li>
+            <li> Et additionnelement un module d'authentification(auth service, auth guard, ...)</li>
+          </ul>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>
+          <a href="https://medium.com/@motcowley/angular-folder-structure-d1809be95542">Article sur la structure</a>
+        </button>
+        <button mat-button>
+          <a href="https://angular.io/guide/styleguide">Angular structure guide</a>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-expansion-panel>
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Pourquoi l'utiliser ?
+      </mat-panel-title>
+      <mat-panel-description>
+        Contexte et différents cas d'utilisation d'Angular
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-card class="example-card">
+
+      <mat-card-content>
+        <div>
+          Ce framework est utilisé dans de nombreux contextes, bien que plus souvent adopté par les entreprises à gros effectifs, certaines
+          start-ups se laissent aussi conquérir par la puissance de l'outil. La facilité avec laquelle des grosses équipes
+          de développeurs peuvent travailler sur la meme app sans se marcher dessus tout en éloborant des fonctionnalités
+          complexes et performantes est un gros point positif du framework.
+          <br><br>
+          Angular utilise TypeScript, c'est ce qu'on appel un superset of JavaScript. TypeScript nous permet de définir
+          les types de nos variables et fonctions pour un code plus robuste et d'avoir des features additionnels qui permettent de
+          faire de la POO à son optimum.
+          <!-- <ul>
+              <li><a href="http://md-angular2.creative-tim.com/dashboard">Un dashboard Admin</a></li>
+              <li><a href="https://angularspree.firebaseapp.com/">Une web app e-commerce</a></li>
+              <li><a href="http://akveo.com/ngx-admin/#/pages/dashboard">Un autre dashboard Admin</a></li>
+              <li><a href="https://www.cyph.com/">Cyph, platforme de chat privé</a></li>
+            </ul> -->
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>
+          <a href="https://www.typescriptlang.org/">TypeScript Docs</a>
+        </button>
+        <button mat-button>
+          <a href="https://www.youtube.com/watch?v=rAy_3SIqT-E">What is TypeScript</a>
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-expansion-panel>
+
+</mat-accordion>

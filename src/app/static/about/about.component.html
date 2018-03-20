@@ -1,0 +1,30 @@
+<div class="background">
+  <div class="gradient">
+    <div class="container">
+      <mat-card class="welcome">
+      <h1>Welcome to <code>{{ brandname }}</code></h1>
+    </mat-card>
+      <div class="actions">
+        <a [ngClass]="animateOnRouteEnter"
+           mat-raised-button color="primary" routerLink="../shop">
+          Check the workshop
+        </a>
+        <a mat-raised-button color="accent" routerLink="../examples"
+           [ngClass]="animateOnRouteEnter">
+          Check examples
+        </a>
+        <a mat-raised-button routerLink="../settings"
+           [ngClass]="animateOnRouteEnter">
+          Change Theme
+        </a>
+      </div>
+      <div class="get-started" [ngClass]="animateOnRouteEnter">
+        <h2>Getting started</h2>
+        <code>git clone https://github.com/cali93/angular-workshop</code><br>
+        <code>cd angular-workshop</code><br>
+        <code>npm install</code><br>
+        <code>npm start</code>
+      </div>
+    </div>
+  </div>
+</div>
