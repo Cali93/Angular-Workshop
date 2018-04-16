@@ -1,10 +1,95 @@
 @import 'styles-variables';
 
+
+.example-card {
+  max-width: 400px;
+  min-height: 300px;
+  background: rgba(100, 100, 100, 0.4);
+  color: white !important;
+  animation-name: bounce;
+  transform-origin: center bottom;
+  animation-duration: 1s;
+  margin-bottom: 0;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+.card-header-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: #c1ecff;
+  margin-left: 15px;
+}
+
+.card-header-desc {
+  font-weight: 500;
+  color:white;
+  margin-left: 15px;
+}
+
+.card-content {
+  font-weight: 500;
+}
+.actionBtn {
+  background: rgba(193,236,255, 0.4) !important;
+  color: white !important;
+  min-width: 30%;
+  max-width:45%;
+}
+.actionBtn:hover {
+  animation-name: tada;
+  animation-duration: 1s;
+  color: rgb(0, 75, 174) !important;
+}
+
+.actionBtn1 {
+  float:left;
+}
+.actionBtn2 {
+  float:right;
+}
+
+.avIcon{
+  font-size: 3.4em;
+  color: #c1ecff;
+}
+
+.fabBtn {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin-left:50%;
+  transform: translateX(-50%);
+  background: rgba(193,236,255, 0.4) !important;
+  text-align: center;
+  border-radius: 100%;
+  animation-name: flash;
+  animation-delay: 5s;
+  animation-duration: 2s;
+  // animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  animation-iteration-count: 2;
+}
+
+.fabIcon {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  color:rgba(0, 65, 150, 0.7);
+  font-size: 50px !important;
+}
+
 .background {
-  padding: 100px 0;
+  padding: 50px 0;
   position: relative;
   .welcome{
-    background-color: rgba($color: white, $alpha: 0.3)
+    background-color: rgba(100, 100, 100, 0.4)
   }
 
   h1 {
@@ -84,6 +169,19 @@
     }
   }
 }
+@media (max-width: 1091px) {
+  .example-card {
+    min-width: 200px;
+  }
+  .actionBtn {
+    font-size:12px;
+  }
+}
+@media (max-width: 845px) {
+  .actionBtn {
+    font-size:10px;
+  }
+}
 
 @media (max-width: map-get($grid-breakpoints, sm)) {
   .background {
@@ -110,5 +208,110 @@
       margin: 40px auto 0 auto;
       padding-bottom: 40px;
     }
+  }
+}
+
+/*ANIMATIONS*/
+
+@keyframes bounce {
+  from,
+  20%,
+  53%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+
+  40%,
+  43% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+@keyframes jello {
+  from,
+  11.1%,
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+
+  22.2% {
+    transform: skewX(-12.5deg) skewY(-12.5deg);
+  }
+
+  33.3% {
+    transform: skewX(6.25deg) skewY(6.25deg);
+  }
+
+  44.4% {
+    transform: skewX(-3.125deg) skewY(-3.125deg);
+  }
+
+  55.5% {
+    transform: skewX(1.5625deg) skewY(1.5625deg);
+  }
+
+  66.6% {
+    transform: skewX(-0.78125deg) skewY(-0.78125deg);
+  }
+
+  77.7% {
+    transform: skewX(0.390625deg) skewY(0.390625deg);
+  }
+
+  88.8% {
+    transform: skewX(-0.1953125deg) skewY(-0.1953125deg);
+  }
+}
+
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%,
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes flash {
+  from,
+  50%,
+  to {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0;
   }
 }
