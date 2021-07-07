@@ -34,9 +34,29 @@ testem.log
 /typings
 
 # e2e
+/e2e
 /e2e/*.js
 /e2e/*.map
 
+#src
+src
+meta-assets
+node_modules
+.angular-cli.json
+.editorconfig
+.travis-deploy.sh
+.travis.yml
+BUILT_WITH.md
+CHANGELOG.md
+CODE_OF_CONDUCT.md
+karma.config.js
+LICENSE
+package-lock.json
+package.json
+protractor.conf.js
+README.md
+tsconfig.json
+tslint.json
 # System Files
 .DS_Store
 Thumbs.db

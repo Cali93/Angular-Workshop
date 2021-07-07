@@ -1,30 +1,34 @@
 <div class="background">
-  <div class="gradient">
-    <div class="container">
+  <!-- <div class="gradient"> -->
+    <div [ngClass]="animateOnRouteEnter" class="container">
       <mat-card class="welcome">
-      <h1>Welcome to <code>{{ brandname }}</code></h1>
-    </mat-card>
-      <div class="actions">
-        <a [ngClass]="animateOnRouteEnter"
-           mat-raised-button color="primary" routerLink="../shop">
-          Check the workshop
-        </a>
-        <a mat-raised-button color="accent" routerLink="../examples"
-           [ngClass]="animateOnRouteEnter">
-          Check examples
-        </a>
-        <a mat-raised-button routerLink="../settings"
-           [ngClass]="animateOnRouteEnter">
-          Change Theme
-        </a>
-      </div>
-      <div class="get-started" [ngClass]="animateOnRouteEnter">
-        <h2>Getting started</h2>
-        <code>git clone https://github.com/cali93/angular-workshop</code><br>
-        <code>cd angular-workshop</code><br>
-        <code>npm install</code><br>
-        <code>npm start</code>
-      </div>
+        <h1>Welcome to
+          <code>{{ becode }}</code>'s roadmap</h1>
+      </mat-card>
+      <mat-grid-list cols="4" rowHeight="100px">
+        <!-- <div class="actions"> -->
+          <mat-grid-tile [ngClass]="animateOnRouteEnter" *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows">
+            <mat-card class="example-card">
+                <mat-card-header>
+                  <div mat-card-avatar><mat-icon class="avIcon">{{tile.icon}}</mat-icon></div>
+                  <mat-card-title class="card-header-title">{{tile.title}}</mat-card-title>
+                  <mat-card-subtitle class="card-header-desc">{{tile.desc}}</mat-card-subtitle>
+                </mat-card-header>
+
+                <mat-card-content>
+                  <p class="card-content">
+                    {{tile.content}}
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <a [ngClass]="animateOnRouteEnter" mat-raised-button class="actionBtn actionBtn1" [routerLink]="tile.url"> {{tile.btn1}} </a>
+                  <a [ngClass]="animateOnRouteEnter" mat-raised-button class="actionBtn actionBtn2" [routerLink]="tile.url2"> {{tile.btn2}} </a>
+                </mat-card-actions>
+              </mat-card>
+          </mat-grid-tile>
+        <!-- </div> -->
+      </mat-grid-list>
+      <a [ngClass]="animateOnRouteEnter" mat-fab class="fabBtn" href="#/about/more"><mat-icon class="fabIcon">arrow_downward</mat-icon></a>
     </div>
-  </div>
+  <!-- </div> -->
 </div>
